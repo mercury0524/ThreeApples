@@ -1,3 +1,4 @@
+from Apple import Apple
 def setup():
   background(0)
   fullScreen()
@@ -6,4 +7,5 @@ def setup():
   
 def draw():
     fill(255)
-    rect(width/2,height/2,width/3,height/3)
+    #rect(width/2,height/2,width/3,height/3)
+    Bible = Apple("adam")
