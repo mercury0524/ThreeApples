@@ -1,16 +1,17 @@
-class Apple():
-    def __init__(self, name):
-        self._name = name
+class Apple(object):
+    def __init__(self):
         self.x = displayWidth/2
         self.y = displayHeight/2
         
     def display(self):
-        if (self._name == "adam"):
-            self._display_adam()
-        elif (self._name == "isaac"):
-            self._display_issac()
-        elif (self._name == "steve"):
-            self._display_steve()
+        # if (self._name == "adam"):
+        #     self._display_adam()
+        # elif (self._name == "isaac"):
+        #     self._display_issac()
+        # elif (self._name == "steve"):
+        #     self._display_steve()
+        
+        pass
             
     def _display_adam(self):
         self._simple_apple(1)
