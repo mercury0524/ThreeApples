@@ -4,47 +4,33 @@ class Apple(object):
         self.y = displayHeight/2
         
     def display(self):
-        # if (self._name == "adam"):
-        #     self._display_adam()
-        # elif (self._name == "isaac"):
-        #     self._display_issac()
-        # elif (self._name == "steve"):
-        #     self._display_steve()
+        raise NotImplementedError
+
+           
+
         
-        pass
-            
-    def _display_adam(self):
-        self._simple_apple(1)
+    def _basic_apple(self,scale_):
+        x_cen = width/2
+        y_cen = height/2
+        fill(255,8,0)
+        #noStroke()
+        stroke(120,0,0)
+        strokeWeight(6)
+        ellipse(x_cen,y_cen,400*scale_,400*scale_)
+        stroke(0)
+        strokeWeight(6)
+        noFill()
+        curve(x_cen,y_cen-240*scale_,x_cen-30*scale_,y_cen-150*scale_,x_cen+30*scale_,y_cen-150*scale_,x_cen,y_cen-240*scale_)
+        stroke(120,0,0)
+        strokeWeight(8)
+        line(x_cen+20*scale_,y_cen-225*scale_,x_cen,y_cen-155*scale_)
         
-    def _display_issac(self):
-        self._branch_and_leaf()
-        self._simple_apple(1.5)
-        
-        
-        
-    def _display_steve(self):
-        self._simple_apple(2)
-        self._bite()
-        
-        
-    def _simple_apple(self,scale_):
-        fill(255,0,0)
+    def _shadow(self,scale_):
+        fill(0)
         noStroke()
-        pushMatrix()
-        translate(self.x-30*scale_,self.y)
-        rotate(-PI/15)
-        ellipse(0,0,150*scale_,200*scale_)
-        popMatrix()
-        pushMatrix()
-        translate(self.x+30*scale_,self.y)
-        rotate(PI/15)
-        ellipse(0,0,150*scale_,200*scale_)
-        popMatrix()
+        #ellipse(width/2+5*scale_,height/2+20*scale_,400*scale_,400*scale_)
+        ellipse(width/2+8*scale_,height/2+20+0*scale_,410*scale_,410*scale_)
+        stroke(0)
+        strokeWeight(8)
+        line(width/2+20*scale_+20,height/2-220*scale_,width/2+20,height/2-150*scale_)
         
-    #for isaac's apple
-    def _branch_and_leaf(self):
-        fill(100,30,30)
-        rect(self.x,self.y-165,20,75)
-    
-    def _bite(self):
-        pass
