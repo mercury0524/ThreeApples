@@ -1,7 +1,7 @@
 from Apple import Apple
 class Adam(Apple):
     def __init__(self):
-        self.scale_ = 0.8
+        self.scale_ = 0.4
         Apple().__init__()
         
         
